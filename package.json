@@ -1,0 +1,22 @@
+{
+  "name": "email-verification-module",
+  "version": "1.0.0",
+  "description": "A robust Node.js module for email validation with SMTP verification, DNS MX lookups, and typo detection.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:verbose": "jest --coverage --verbose"
+  },
+  "keywords": ["email", "verification", "smtp", "dns", "validation"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": ["**/tests/**/*.test.js"],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": ["src/**/*.js"]
+  }
+}
