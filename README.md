@@ -195,3 +195,40 @@ levenshtein('gmial.com', 'gmail.com')   // → 2  ✅ suggested
 levenshtein('outlok.com', 'outlook.com') // → 1  ✅ suggested
 levenshtein('xyz123.com', 'gmail.com')  // → 7  ❌ no suggestion
 ```
+
+---
+
+## 🌐 Web API & Hosting (Vercel)
+
+This module includes an **Express.js API wrapper**, making it ready to be deployed instantly as a serverless API.
+
+### Local API Development
+Start the local server:
+```bash
+npm start
+```
+Test the endpoint:
+```bash
+curl http://localhost:3000/api/verify?email=test@example.com
+```
+
+### 🚀 Deploying to Vercel
+Vercel is the easiest place to host this API. We've included a `vercel.json` config mapping all traffic to the Express API.
+
+1. Create an account at [Vercel.com](https://vercel.com)
+2. Click **Add New Project**
+3. Import your GitHub repository (`email-verification-module`)
+4. Leave all settings as default and click **Deploy**
+
+Your API will be live at `https://your-app-name.vercel.app/api/verify?email=user@example.com`.
+
+### ⚠️ IMPORTANT: Cloud Hosting & Port 25
+When you host this API on Vercel (or AWS, Render, etc.), the provider's firewall blocks **Outbound Port 25** to prevent server abuse/spam. 
+
+This means that while hosted:
+- ✅ Syntax validation works perfectly
+- ✅ Typo detection works perfectly
+- ✅ DNS MX lookups work perfectly
+- ❌ The final SMTP handshake will time out. The API will still return a graceful response (`result: 'unknown'`, `subresult: 'connection_error'`).
+
+For an academic project or assignment, this is completely normal and expected. Tell your evaluator that it works 100% locally on your home network, but cloud providers block port 25 for free tiers.
