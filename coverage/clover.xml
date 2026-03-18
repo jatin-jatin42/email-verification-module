@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1773831854542" clover="3.2.0">
-  <project timestamp="1773831854542" name="All files">
+<coverage generated="1773832036144" clover="3.2.0">
+  <project timestamp="1773832036144" name="All files">
     <metrics statements="148" coveredstatements="133" conditionals="107" coveredconditionals="83" methods="17" coveredmethods="15" elements="272" coveredelements="231" complexity="0" loc="148" ncloc="148" packages="1" files="3" classes="3"/>
     <file name="getDidYouMean.js" path="/Users/jatin/dev/projects codes/assignments/email-verification-module-app/email-verification-module/src/getDidYouMean.js">
       <metrics statements="30" coveredstatements="30" conditionals="28" coveredconditionals="27" methods="4" coveredmethods="4"/>
